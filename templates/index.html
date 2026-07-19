@@ -1,1 +1,165 @@
-<h1> Welcome to the Home Page </h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Exam Performance Predictor | Home</title>
+
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family:Arial, Helvetica, sans-serif;
+        }
+
+        body{
+            min-height:100vh;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            background:linear-gradient(135deg,#4facfe,#00f2fe);
+        }
+
+        .container{
+            width:700px;
+            background:white;
+            padding:50px 40px;
+            border-radius:15px;
+            box-shadow:0 10px 30px rgba(0,0,0,.25);
+            text-align:center;
+        }
+
+        .badge{
+            display:inline-block;
+            background:#e8f4ff;
+            color:#0077ff;
+            font-size:13px;
+            font-weight:bold;
+            padding:6px 14px;
+            border-radius:20px;
+            margin-bottom:20px;
+            letter-spacing:.5px;
+        }
+
+        h1{
+            color:#333;
+            margin-bottom:15px;
+            font-size:32px;
+        }
+
+        p.subtitle{
+            color:#666;
+            margin-bottom:35px;
+            font-size:16px;
+            line-height:1.6;
+        }
+
+        .features{
+            display:flex;
+            justify-content:space-between;
+            gap:15px;
+            margin-bottom:35px;
+        }
+
+        .feature{
+            flex:1;
+            background:#f5f9ff;
+            padding:20px 15px;
+            border-radius:10px;
+        }
+
+        .feature .icon{
+            font-size:26px;
+            margin-bottom:8px;
+        }
+
+        .feature h3{
+            font-size:15px;
+            color:#333;
+            margin-bottom:6px;
+        }
+
+        .feature p{
+            font-size:13px;
+            color:#777;
+            line-height:1.4;
+        }
+
+        .btn{
+            display:inline-block;
+            width:100%;
+            padding:16px;
+            border:none;
+            border-radius:8px;
+            background:#4facfe;
+            color:white;
+            font-size:18px;
+            font-weight:bold;
+            text-decoration:none;
+            cursor:pointer;
+            transition:.3s;
+        }
+
+        .btn:hover{
+            background:#0077ff;
+        }
+
+        footer{
+            margin-top:25px;
+            font-size:13px;
+            color:#999;
+        }
+
+        @media (max-width:600px){
+            .container{
+                width:90%;
+                padding:35px 25px;
+            }
+            .features{
+                flex-direction:column;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <span class="badge">MACHINE LEARNING MODEL</span>
+
+    <h1>📚 Student Exam Performance Predictor</h1>
+
+    <p class="subtitle">
+        Estimate a student's Mathematics score based on demographic details,
+        lunch type, test preparation, and reading &amp; writing performance —
+        powered by a trained ML model.
+    </p>
+
+    <div class="features">
+        <div class="feature">
+            <div class="icon">⚡</div>
+            <h3>Instant Prediction</h3>
+            <p>Get results in real time, no waiting.</p>
+        </div>
+        <div class="feature">
+            <div class="icon">🎯</div>
+            <h3>Data Driven</h3>
+            <p>Trained on real exam performance data.</p>
+        </div>
+        <div class="feature">
+            <div class="icon">☁️</div>
+            <h3>Cloud Hosted</h3>
+            <p>Deployed and running on Azure.</p>
+        </div>
+    </div>
+
+    <a class="btn" href="{{ url_for('predict_datapoint') }}">Get Started →</a>
+
+    <footer>Built with Flask &amp; Scikit-learn · Hosted on Microsoft Azure</footer>
+
+</div>
+
+</body>
+</html>
